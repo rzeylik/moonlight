@@ -1,0 +1,28 @@
+.footerInner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 102px 0;
+    flex-wrap: nowrap;
+    max-width: 775px;
+}
+
+.footerNameCompany{
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+}
+
+.footerNetworkCompany{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 340px;
+    width: 100%;
+}
+
+.footerSocial{
+    max-width: 40px;
+    max-height: 40px;
+}

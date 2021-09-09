@@ -1,25 +1,41 @@
-import logo from './logo.svg';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
 
-function App() {
+import { Provider } from 'react-redux'
+import React, { useEffect, useState } from 'react'
+
+import { createStore } from './redux/store'
+import autoload from './utils/autoload'
+import Router from './Router'
+
+import './App.css'
+
+let store
+
+const App = () => {
+  const [isLoaded, setLoaded] = useState(true)
+
+  useEffect(() => {
+    autoload()
+        .then(({ userData }) => {
+          store = createStore({ user: userData })
+        })
+        .finally(() => setLoaded(false))
+
+    return () => setLoaded(true)
+  }, [])
+
+  if (isLoaded || !store) {
+    return null
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <div className="App">
+        <Provider store={store}>
+          <Router />
+        </Provider>
+      </div>
+  )
 }
 
-export default App;
+export default App
