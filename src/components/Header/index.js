@@ -16,7 +16,7 @@ class Header extends React.Component {
           </Link>
           <div className="headerItem">
               <div className="searchInner">
-                  <img src="./image/searchButtonOpen.svg" alt="S" className="searchImg"/>
+                  <img src="./image/searchButtonOpen.png" alt="S" className="searchImg"/>
               </div>
               <img src="./image/logoProfile.png" alt="Profile" className="logoProfile"/>
           </div>
