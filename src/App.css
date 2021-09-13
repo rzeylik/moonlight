@@ -30,6 +30,9 @@ p{
 }
 .App {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .layoutWrap {
   display: flex;
@@ -43,3 +46,39 @@ p{
   margin: 0 auto;
 }
 
+.slick-dots{
+  bottom: -45px;
+  width: initial;
+  right: 5%;
+}
+
+.slick-dots li{
+  position: relative;
+  display: inline-block;
+  width: 70px;
+  height: 2px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button{
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 70px;
+  height: 2px;
+  cursor: pointer;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: #E5E5E5;
+}
+
+.slick-dots .slick-active button{
+  background-color: #000000;
+}
+
+.slick-dots li button::before{
+  content: '';
+}

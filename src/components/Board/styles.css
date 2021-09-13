@@ -40,9 +40,10 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    max-width: 1545px;
+    max-width: calc(50% + 585px);
     width: 100%;
     margin-left: auto;
+
 }
 
 .sliderItemImage{

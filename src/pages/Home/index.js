@@ -12,7 +12,7 @@ class Home extends React.Component {
   render() {
     return (
       <Layout>
-        <SlickSlider Item={Board} data={range(0, 15)} />
+        <SlickSlider Item={Board} data={range(0, 10)} />
       </Layout>
     )
   }

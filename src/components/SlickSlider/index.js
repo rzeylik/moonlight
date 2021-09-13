@@ -5,8 +5,10 @@ const SlickSlider = ({ data = [], Item, countElement = 1 }) => {
   const settings = {
     slidesToShow: countElement,
     slidesToScroll: countElement,
-    dots: false,
+    autoplay: true,
+    dots: true,
     infinite: true,
+    arrows: false,
     speed: 500,
   }
 
@@ -14,8 +16,8 @@ const SlickSlider = ({ data = [], Item, countElement = 1 }) => {
     <div>
       <Slider {...settings}>
         {data?.map(
-          () => (
-            <Item />
+          (index) => (
+            <Item key={index} />
           )
         )}
       </Slider>
