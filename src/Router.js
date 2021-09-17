@@ -1,9 +1,10 @@
 import React from 'react'
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 
+import routes from './routes'
+import SignUp from "./pages/SignUp";
 import Page404 from './pages/404'
 import Home from './pages/Home'
-import routes from './routes'
 
 export const pages = [
   {
@@ -12,6 +13,11 @@ export const pages = [
     Component: Home,
     exact: true,
   },
+  {
+    path: routes.signUp,
+    name: 'SignUp',
+    Component: SignUp
+  }
 ]
 
 const Router = () => {

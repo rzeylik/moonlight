@@ -1,9 +1,12 @@
 import React from 'react'
-
 import { Link } from 'react-router-dom'
+import moment from "moment"
+
 import routes from '../../routes'
 import './styles.css'
 
+
+console.log(moment().add(1, 'days').format("DD.MM.YY"))
 class Header extends React.Component {
   render() {
     return (
