@@ -5,6 +5,7 @@ import routes from './routes'
 import SignUp from "./pages/SignUp";
 import Page404 from './pages/404'
 import Home from './pages/Home'
+import Profile from "./pages/Profile";
 
 export const pages = [
   {
@@ -16,8 +17,15 @@ export const pages = [
   {
     path: routes.signUp,
     name: 'SignUp',
-    Component: SignUp
-  }
+    Component: SignUp,
+    exact: true,
+  },
+  {
+    path: routes.profile,
+    name: 'Profile',
+    Component: Profile,
+    exact: true,
+  },
 ]
 
 const Router = () => {

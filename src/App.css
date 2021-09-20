@@ -3,7 +3,7 @@ h1 {
   font-size: 48px;
   line-height: 68px;
   font-family: 'PoppinsSemiBold';
-  color: #fff;
+  color: #000000;
   margin: 0;
 }
 h2 {
@@ -27,6 +27,7 @@ h4 {
 }
 p{
   margin: 0;
+  color: #000000;
 }
 .App {
   min-height: 100vh;
