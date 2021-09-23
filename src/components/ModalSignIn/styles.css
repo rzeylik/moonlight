@@ -1,0 +1,41 @@
+.signin__modal {
+    padding: 75px 50px;
+}
+
+.signin__title {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.signin__input {
+    max-width: 350px;
+    width: 100%;
+    border: none;
+    outline: none;
+    display: block;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.14);
+}
+
+.signin__button {
+    max-width: 350px;
+    padding: 10px 20px;
+    text-align: center;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.signin__login {
+    background-color: #5D5FEF;
+}
+
+.signin__registration {
+    background-color: #EF5DA8;
+}
+
+.signin__line {
+    width: 100%;
+    background: #000;
+    height: 1px;
+}
