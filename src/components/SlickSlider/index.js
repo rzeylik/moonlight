@@ -7,9 +7,10 @@ const SlickSlider = ({ data = [], Item, countElement = 1 }) => {
     slidesToScroll: countElement,
     autoplay: true,
     dots: true,
+    fade: true,
     infinite: true,
     arrows: false,
-    speed: 500,
+    speed: 1000,
   }
 
   return (
