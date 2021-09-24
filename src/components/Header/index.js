@@ -5,7 +5,7 @@ import ModalSignIn from "../ModalSignIn";
 import "./styles.css";
 
 const Header = () => {
-  const [show, setShow] = useState(true)
+  const [show, setShow] = useState(false)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)

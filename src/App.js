@@ -16,27 +16,28 @@ import './App.css'
 let store
 
 const App = () => {
-  const [isLoaded, setLoaded] = useState(true)
+  // const [isLoaded, setLoaded] = useState(true)
 
-  useEffect(() => {
-    autoload()
-        .then(({ userData }) => {
-          store = createStore({ user: userData })
-        })
-        .finally(() => setLoaded(false))
+  // useEffect(() => {
+  //   autoload()
+  //       .then(({ userData }) => {
+  //         store = createStore({ user: userData })
+  //       })
+  //       .finally(() => setLoaded(false))
+  //
+  //   return () => setLoaded(true)
+  // }, [])
 
-    return () => setLoaded(true)
-  }, [])
-
-  if (isLoaded || !store) {
-    return null
-  }
+  // if (isLoaded || !store) {
+  //   return null
+  // }
 
   return (
       <div className="App">
-        <Provider store={store}>
+        {/*<Provider store={store}>*/}
+        {/*  <Router />*/}
+        {/*</Provider>*/}
           <Router />
-        </Provider>
       </div>
   )
 }
