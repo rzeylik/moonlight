@@ -13,7 +13,7 @@
     border: none;
     outline: none;
     display: block;
-    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.14);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.14);
 }
 
 .signin__button {
@@ -38,4 +38,7 @@
     width: 100%;
     background: #000;
     height: 1px;
+}
+.test::placeholder{
+    color:red;
 }
