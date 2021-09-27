@@ -1,7 +1,7 @@
 import React from 'react'
 import Slider from 'react-slick'
 
-const SlickSlider = ({ data = [], Item, countElement = 1 }) => {
+const SlickSlider = ({ data = [], Item, countElement = 1, secondSettings={} }) => {
   const settings = {
     slidesToShow: countElement,
     slidesToScroll: countElement,
@@ -11,6 +11,7 @@ const SlickSlider = ({ data = [], Item, countElement = 1 }) => {
     infinite: true,
     arrows: false,
     speed: 1000,
+    ...secondSettings,
   }
 
   return (

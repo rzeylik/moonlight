@@ -1,8 +1,12 @@
 import React from "react"
 import {useForm} from "react-hook-form"
+import {Link} from "react-router-dom"
 import { Modal } from "react-bootstrap"
 
+import routes from "../../routes"
+
 import "./styles.css"
+
 
 const ModalSignIn = ({ show, handleClose }) => {
   const {register, handleSubmit, formState: {errors}} = useForm()
@@ -32,8 +36,8 @@ const ModalSignIn = ({ show, handleClose }) => {
           />
           <button type="submit" className="signin__button signin__login my-4">Увійти</button>
           <div className='signin__line'></div>
-          <button className="signin__button signin__registration my-4">Регістрація</button>
-        </form>
+          <Link to={routes.signUp} className="signin__button signin__registration my-4">Регістрація</Link>
+        </div>
       </div>
     </Modal>
   )

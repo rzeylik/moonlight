@@ -8,7 +8,9 @@ import './styles.css'
 const Home = () => {
     return (
       <Layout>
-        <SlickSlider Item={Board} data={range(0, 10)} />
+          <section className="homeSlider">
+              <SlickSlider Item={Board} data={range(0, 10)} />
+          </section>
       </Layout>
     )
 }

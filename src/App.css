@@ -46,7 +46,7 @@ p{
   margin: 0 auto;
 }
 
-.slick-dots{
+.homeSlider .slick-dots{
   bottom: -45px;
   width: initial;
   right: 5%;

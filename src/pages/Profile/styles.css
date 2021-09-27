@@ -23,3 +23,23 @@
     text-transform: capitalize;
     color: #EF5DA8;
 }
+
+.slickInner .slick-prev,
+.slickInner .slick-next{
+    width: 50px;
+    margin-bottom: -3px;
+    height: 50px;
+    z-index: 100;
+}
+
+.slickInner .slick-prev:before,
+.slickInner .slick-next:before{
+    display: flex;
+    align-items: center;
+    background-color: #000000;
+    font-size: 50px;
+    padding-top: 7px;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+}
