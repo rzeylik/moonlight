@@ -37,8 +37,8 @@ const ModalSignIn = ({ show, handleClose }) => {
           <button type="submit" className="signin__button signin__login my-4">Увійти</button>
           <div className='signin__line'></div>
           <Link to={routes.signUp} className="signin__button signin__registration my-4">Регістрація</Link>
+          </form>
         </div>
-      </div>
     </Modal>
   )
 }
