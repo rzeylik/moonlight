@@ -1,7 +1,11 @@
-import React, { useState } from "react";
-import { Modal } from "react-bootstrap";
+import React from "react"
+import { Modal } from "react-bootstrap"
+import {Link} from "react-router-dom"
+
+import routes from "../../routes";
 
 import "./styles.css";
+
 
 const ModalSignIn = ({ show, handleClose }) => {
   return (
@@ -21,7 +25,7 @@ const ModalSignIn = ({ show, handleClose }) => {
           />
           <button className="signin__button signin__login my-4">Увійти</button>
           <div className='signin__line'></div>
-          <button className="signin__button signin__registration my-4">Регістрація</button>
+          <Link to={routes.signUp} className="signin__button signin__registration my-4">Регістрація</Link>
         </div>
       </div>
     </Modal>
