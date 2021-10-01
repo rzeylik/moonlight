@@ -4,6 +4,7 @@ const routes = {
   registration: '/registration',
   signUp: '/signUp',
   profile: '/profile',
+  filmPage: '/filmPage'
 }
 
 export default routes

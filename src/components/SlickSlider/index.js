@@ -1,13 +1,13 @@
 import React from 'react'
 import Slider from 'react-slick'
 
-const SlickSlider = ({ data = [], Item, countElement = 1, secondSettings={} }) => {
+const SlickSlider = ({ data = [], fade=true, Item, countElement = 1, secondSettings={} }) => {
   const settings = {
     slidesToShow: countElement,
     slidesToScroll: countElement,
     autoplay: true,
     dots: true,
-    fade: true,
+    fade: fade,
     infinite: true,
     arrows: false,
     speed: 1000,

@@ -1,3 +1,16 @@
 .homeSlider{
     margin-bottom: 190px;
 }
+
+.filmImg{
+    max-width: 170px;
+    margin-bottom: 76px;
+}
+
+.filmsTitle{
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 27px;
+}
