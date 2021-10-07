@@ -1,13 +1,15 @@
 import React, {useEffect, useState} from "react"
 import {useForm} from "react-hook-form"
+import Select from 'react-select'
 
 import './styles.css'
 import Layout from "../../components/Layout"
 import Board from "../../components/Board"
-import {isNil} from "lodash";
+import {isNil} from "lodash"
 
 const FilmPage = () =>{
     const date = ['10:39', '14:00', '15:30', '17:00', '18:00', '23:00']
+    const dateView = [{value: '29.12.22', label: '29.12.22'}, {value:'30.12.22', label: '30.12.22'}]
     const mass = [1,3,4,8,9]
     const data = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false,]
     const [place, setPlace] = useState([])
@@ -33,7 +35,7 @@ const FilmPage = () =>{
                     <div className="filmTicketItem">
                         <div className="filmTextInner">
                             <p className="formText">Дата</p>
-                            <p className="filmDate">{`12.12.2021`}</p>
+                            <Select defaultValue={dateView[0]} options={dateView} />
                         </div>
                         <div className="formInnerTimeCheckbox">
                             {date.map((item, index) => <label key={index+1} className="formRadioText"><input {...register('timeCheckbox')} className="d-none" type="radio" value={item}/><span>{item}</span></label>)}
