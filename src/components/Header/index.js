@@ -1,14 +1,18 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import routes from "../../routes";
 import ModalSignIn from "../ModalSignIn";
 import "./styles.css";
+import {useSelector} from "react-redux";
+import {isEmpty, isNil} from "lodash";
 
 const Header = () => {
   const [show, setShow] = useState(false)
-
+  const history = useHistory()
+  const loginUser = useSelector((state) => state?.user?.data)
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
+  console.log(isNil(loginUser))
 
   return (
     <header className="header">
@@ -22,9 +26,15 @@ const Header = () => {
             <div className="searchInner">
                 <img src="./image/searchButtonOpen.png" alt="S" className="searchImg"/>
             </div>
-            <Link to={'/profile'}>
+            <div onClick={() => {
+              if (!isNil(loginUser) && !isEmpty(loginUser)) {
+              history.push(routes.profile)
+              }else{
+              handleShow()
+              }
+            }}>
               <img src="./image/logoProfile.png" alt="Profile" className="logoProfile"/>
-            </Link>
+            </div>
           </div>
         </div>
       </div>
