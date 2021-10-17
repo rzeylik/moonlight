@@ -1,20 +1,28 @@
 import React from 'react'
 import {useForm} from "react-hook-form"
+import {useHistory} from "react-router-dom"
 
-import {name, email, password} from "../../utils/constants";
+
+import {name, email, password} from "../../utils/constants"
+import {signUp} from "../../api/user"
 import Layout from "../../components/Layout"
 
 import './styles.css'
-
+import routes from "../../routes";
 
 const SignUp = () =>{
     const {register, handleSubmit, formState:{errors},} = useForm()
+    const history = useHistory()
+
     const errorsStyleEmail = !errors?.email ? '' : 'test'
     const errorsStyleName = !errors?.name ? '' : 'test'
     const errorsStylePassword = !errors?.password ? '' : 'test'
+
     const onSubmit = (data) =>{
         console.log(data)
+        signUp(data).then(() => history.push(routes.home))
     }
+
     return(
         <Layout>
             {errors?.name || errors?.password || errors?.email ? ( <div className="formRequired">
