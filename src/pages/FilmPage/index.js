@@ -22,7 +22,6 @@ const FilmPage = () =>{
         }, [null])
         setPlace(selectedElements)
     }, [])
-    console.log([...place.slice(0,7), null, ...place.slice(8) ].length)
 
     const onSubmit = (data) => console.log(data)
 

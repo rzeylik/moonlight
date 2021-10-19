@@ -1,26 +1,39 @@
-import React from "react"
+import React, {useState} from "react"
 import {useForm} from "react-hook-form"
-import {Link} from "react-router-dom"
+import {Link, useHistory} from "react-router-dom"
 import { Modal } from "react-bootstrap"
 
 import routes from "../../routes"
+import {login} from "../../service/user"
+import {USER_KEY} from "../../utils/constants"
+import localStorage from "../../utils/localStorage"
+import createReducer from "../../redux/reducers/user"
 
 import "./styles.css"
+import {isNil} from "lodash";
 
 
 const ModalSignIn = ({ show, handleClose }) => {
   const {register, handleSubmit, formState: {errors}} = useForm()
+
+  const history = useHistory()
   const errorsStyleEmail = !errors?.email ? '' : 'test'
   const errorsStylePassword = !errors?.password ? '' : 'test'
+  const [error, setError] = useState(null)
 
   const onSubmit = (data) =>{
-    console.log(data)
+    login(data).then((data) => {
+      console.log(data)
+      createReducer(data)
+      localStorage.setItem(USER_KEY, data?.access_token?.token)
+    }).then(() => history.push(routes.profile)).catch((err) => setError(err))
   }
 
   return (
     <Modal centered show={show} onHide={handleClose}>
       <div className="signin__modal text-center">
         <h3 className="signin__title">Увійдіть у профіль</h3>
+        <h1>{!isNil(error) ? 'Ops' : null}</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="mx-auto my-4 d-flex align-items-center flex-column">
           <input
             type="email"
