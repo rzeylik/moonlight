@@ -4,7 +4,10 @@
 
 .filmImg{
     max-width: 170px;
+    width: 100%;
+    height: 268px;
     margin-bottom: 76px;
+    object-fit: cover;
 }
 
 .filmsTitle{
@@ -13,4 +16,130 @@
     line-height: 35px;
     color: #000000;
     margin-bottom: 27px;
+}
+
+.innerSpan{
+    position: relative;
+    max-width: 570px;
+    width: 100%;
+    height: 2px;
+    background-color: #E5E5E5;
+}
+
+.spanBtn{
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #828282;
+    border-radius: 50%;
+    margin-top: -4px;
+    padding: 0;
+    border: none;
+}
+
+.wrapperSessions{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.innerDaySession{
+    max-width: 570px;
+    width: 100%;
+}
+
+.dayShow{
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.smallDate{
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    margin-top: 30px;
+    margin-bottom: 22px;
+    color: #000000;
+}
+
+.titleSessions{
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 35px;
+    color: #000000;
+    margin-bottom: 27px;
+}
+
+.secondMargin{
+    margin-left: 10px;
+}
+
+.spanTime{
+    position: absolute;
+    top: 10px;
+    left: -13px;
+}
+
+.filterForm{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+}
+
+.innerRangeStyle{
+    max-width: 300px;
+    width: 100%;
+}
+
+.innerRange{
+    display: flex;
+    align-items: center;
+}
+
+.labelTextRange{
+    margin-right: 20px;
+    font-size: 24px;
+    line-height: 28px;
+
+    color: #000000;
+}
+
+.innerFiltersFilm{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.filterBtn{
+    width: 270px;
+    padding: 14px 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #5D5FEF;
+    background: #FFFFFF;
+    border: 2px solid #5D5FEF;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.emptyFilm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    flex-direction: column;
+}
+
+.emptyFilm p{
+    font-size: 40px;
 }

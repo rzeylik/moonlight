@@ -43,3 +43,138 @@
     width: 100%;
     height: 100%;
 }
+
+.innerEmptyTicket{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.titleEmpty{
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 28px;
+}
+
+.textEmpty{
+    font-size: 20px;
+    line-height: 23px;
+    color: #000000;
+}
+
+.emptyImage{
+    max-width: 490px;
+}
+
+.profileSlickItem{
+    display: flex;
+    flex-direction: column;
+    max-width: 387px;
+    width: 100%;
+}
+
+.profileDataTitle{
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 46px;
+    text-align: center;
+}
+
+.profileDataPlaces{
+    display: flex;
+    max-width: 100%;
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.profileDataPlaces::-webkit-scrollbar{
+    display: none;
+}
+
+.itemPlaces{
+    font-size: 24px;
+    line-height: 28px;
+    padding: 20px;
+    background: linear-gradient(180deg, #5D5FEF 0%, #5D5FEF 100%);
+    box-shadow: 0px 5px 5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    justify-content: center;
+    color: #FFFFFF;
+}
+
+.innerPriceAll{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.innerTextAndBtn{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 280px;
+    width: 100%;
+}
+
+.allPrice{
+    font-size: 48px;
+    line-height: 56px;
+    color: #EF5DA8;
+}
+
+.generateDocx{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    text-transform: capitalize;
+    color: #5D5FEF;
+    padding: 16px 25px;
+    background: rgba(93, 95, 239, 0.2);
+    border: 2px solid #5D5FEF;
+    box-shadow: -4px -4px 10px rgba(93, 95, 239, 0.25), 4px 4px 10px rgba(93, 95, 239, 0.25);
+    border-radius: 10px;
+    margin-left: 36px;
+    transition: all .5s;
+}
+
+.generateDocx:hover{
+    background-color: #5D5FEF;
+    color: #FFFFFF;
+    border: 2px solid rgba(93, 95, 239, 0.2);
+}
+
+.innerUserAvatar{
+    display: flex;
+    align-items: center;
+}
+
+.fileAvatar{
+    display: none;
+}
+
+.avatarUser{
+    min-width: 70px;
+    height: 70px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.labelAvatar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}

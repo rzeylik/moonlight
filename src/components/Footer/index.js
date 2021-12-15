@@ -9,10 +9,10 @@ class Footer extends React.Component {
             <div className="footerInner">
               <p className="footerNameCompany">MoonLight team</p>
               <div className="footerNetworkCompany">
-                <a href="#" className="footerSocial"><img  className="footerSocial" src="./image/socialInstagram.svg" alt=""/></a>
-                <a href="#" className="footerSocial"><img  className="footerSocial" src="./image/socialInstagram.svg" alt=""/></a>
-                <a href="#" className="footerSocial"><img  className="footerSocial" src="./image/socialInstagram.svg" alt=""/></a>
-                <a href="#" className="footerSocial"><img  className="footerSocial" src="./image/socialInstagram.svg" alt=""/></a>
+                <a href="#" className="footerSocial"><img  className="footerSocial" src="/image/socialInstagram.svg" alt=""/></a>
+                <a href="#" className="footerSocial"><img  className="footerSocial" src="/image/socialInstagram.svg" alt=""/></a>
+                <a href="#" className="footerSocial"><img  className="footerSocial" src="/image/socialInstagram.svg" alt=""/></a>
+                <a href="#" className="footerSocial"><img  className="footerSocial" src="/image/socialInstagram.svg" alt=""/></a>
               </div>
             </div>
           </div>

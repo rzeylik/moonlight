@@ -4,7 +4,7 @@ import {Link, useHistory} from "react-router-dom"
 import { Modal } from "react-bootstrap"
 
 import routes from "../../routes"
-import {login} from "../../service/user"
+import {login, updateToken} from "../../service/user"
 import {USER_KEY} from "../../utils/constants"
 import localStorage from "../../utils/localStorage"
 import createReducer from "../../redux/reducers/user"
@@ -23,17 +23,19 @@ const ModalSignIn = ({ show, handleClose }) => {
 
   const onSubmit = (data) =>{
     login(data).then((data) => {
-      console.log(data)
       createReducer(data)
-      localStorage.setItem(USER_KEY, data?.access_token?.token)
-    }).then(() => history.push(routes.profile)).catch((err) => setError(err))
+      updateToken(data?.access_token?.token)
+    }).then(() => {
+      history.push(routes.profile)
+      window.location.reload()
+    }).catch((err) => setError(err))
   }
 
   return (
     <Modal centered show={show} onHide={handleClose}>
       <div className="signin__modal text-center">
         <h3 className="signin__title">Увійдіть у профіль</h3>
-        <h1>{!isNil(error) ? 'Ops' : null}</h1>
+        <h5 style={{color: 'red'}}>{!isNil(error) ? 'This user is not registered' : null}</h5>
         <form onSubmit={handleSubmit(onSubmit)} className="mx-auto my-4 d-flex align-items-center flex-column">
           <input
             type="email"

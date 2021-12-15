@@ -78,3 +78,36 @@
     text-transform: capitalize;
     color: #EF5DA8;
 }
+
+.innersAllInputs{
+    margin-top: 40px;
+}
+
+.innerInput{
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.inputRadio{
+    display: none;
+}
+
+.labelRadio{
+    display: block;
+    padding: 10px 25px;
+    border-radius: 5px;
+    border: 1px solid #440ea2;
+    font-weight: 700;
+    transition: all .5s;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.innerInput input:checked ~ .labelRadio {
+    background-color: #440ea2;
+    border: 1px solid transparent;
+    color: #FFFFFF;
+}

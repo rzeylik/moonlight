@@ -42,7 +42,13 @@
     width: 100%;
     margin-top: 28px;
 }
-
+.emptyRadio{
+    margin: 0 auto 20px;
+}
+.emptyPlace{
+    font-size: 24px;
+    margin: 0 auto;
+}
 .formRadioText{
     margin: 0 5px 25px;
     font-size: 18px;
@@ -105,6 +111,10 @@
     cursor: pointer;
 }
 
+.luxPlaces{
+    background: linear-gradient(180deg, #bda91f 0%, #FFD700 100%);
+}
+
 .formPlaceCheck:checked{
     background: linear-gradient(180deg, #5D5FEF 0%, #5D5FEF 100%);
 }
@@ -115,6 +125,10 @@
     position: relative;
 }
 
+.luxPlaces:checked{
+    background: linear-gradient(180deg, #a99318 0%, #b29c06 100%);
+}
+
 .formPlaceCheck:disabled::before{
     content: '';
     position: absolute;
@@ -123,4 +137,85 @@
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
+}
+
+.luxPlaces:disabled {
+    background: linear-gradient(180deg, #917800 0%, #ffa600 100%);
+    cursor: auto;
+    position: relative;
+}
+
+
+.luxPlaces:disabled::before{
+    content: '';
+    position: absolute;
+    background-image: url("../../imageCss/disableChecked.png");
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.titleComment{
+    margin-bottom: 30px;
+}
+
+.comments{
+    margin: 20px 0;
+}
+
+.innerInfoUser{
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.avatarUser{
+    max-width: 50px;
+    width: 100%;
+    margin-right: 15px;
+}
+
+.userName{
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+}
+
+.userMessage{
+    max-width: 970px;
+    font-size: 20px;
+    line-height: 28px;
+    text-align: justify;
+    color: #4F4F4F;
+}
+
+.commentInput{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+}
+
+.innerHoverPlace{
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+.hoverText{
+    position: absolute;
+    background-color: #FFFFFF;
+    width: 250px;
+    box-shadow: 0 0 24px 12px rgba(34, 60, 80, .2);
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+    padding: 10px;
+}
+
+.innerHoverPlace:hover > .hoverText{
+    visibility: visible;
+    opacity: 1;
 }

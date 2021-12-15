@@ -1,14 +1,13 @@
 import React from 'react'
 import Slider from 'react-slick'
 
-const SlickSlider = ({ data = [], fade=true, Item, countElement = 1, secondSettings={} }) => {
+const SlickSlider = ({ data = [], fade=true, Item, countElement = 1, secondSettings={}, deleteTicket }) => {
   const settings = {
     slidesToShow: countElement,
     slidesToScroll: countElement,
     autoplay: true,
     dots: true,
-    fade: fade,
-    infinite: true,
+    // infinite: true,
     arrows: false,
     speed: 1000,
     ...secondSettings,
@@ -18,8 +17,8 @@ const SlickSlider = ({ data = [], fade=true, Item, countElement = 1, secondSetti
     <div>
       <Slider {...settings}>
         {data?.map(
-          (index) => (
-            <Item key={index} />
+          (item ,index) => (
+            <Item key={index} data={item} deleteTicket={deleteTicket} />
           )
         )}
       </Slider>

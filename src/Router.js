@@ -8,6 +8,10 @@ import SignUp from "./pages/SignUp"
 import Page404 from './pages/404'
 import Home from './pages/Home'
 
+export const formFilm = (id) => {
+  return `${routes.filmPage}/${id}`
+}
+
 export const pages = [
   {
     path: routes.home,
@@ -28,10 +32,10 @@ export const pages = [
     exact: true,
   },
   {
-    path: routes.filmPage,
+    path: formFilm(':id'),
     name: 'FilmPage',
     Component: FilmPage,
-    exact: true,
+    exact: false,
   }
 ]
 

@@ -1,6 +1,6 @@
 import axios from 'axios'
+import {API_ROOT} from "./constants";
 
-import { API_ROOT } from './constants'
 
 const rawRequest = async (url, method = 'get', options = {}) => {
     let params = {
@@ -42,10 +42,26 @@ const setHandlers = (onSuccess, onError) => {
     )
 }
 
+const uploadRequest = async (url, data = {}, method = 'put') => {
+    const formData = new FormData()
+    for (const field of Object.entries(data)) {
+        const [key, value] = field
+        formData.append(key, value)
+    }
+
+    return rawRequest(url, method, { data: formData })
+        .then(({ data }) => data)
+        .catch((e) => {
+            console.log(e)
+            return e
+        })
+}
+
 export default {
     get: getRequest,
     post: postRequest,
     delete: deleteRequest,
     put: putRequest,
+    upload: uploadRequest,
     setHandlers,
 }

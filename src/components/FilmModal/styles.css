@@ -1,0 +1,33 @@
+.filmModal{
+    padding: 0 17px;
+}
+
+.filmModal .modal-content{
+    padding: 10px;
+}
+
+.filmModalImg{
+    width: 100%;
+    max-width: 300px;
+}
+
+.innerModalFilms{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btnModalClose{
+    margin-left: auto;
+    background-color: red;
+    border: none;
+    color: #FFFFFF;
+    padding: 7px;
+    min-width: 38px;
+}
+
+@media (min-width: 576px){
+   .filmModal .modal-dialog{
+        max-width: initial;
+    }
+}

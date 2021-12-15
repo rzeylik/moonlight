@@ -1,10 +1,9 @@
 .profileSlick{
     display: flex;
-    align-items: center;
     max-width: 770px;
     width: 100%;
     position: relative;
-    padding: 50px 38px;
+    padding: 35px 27px 35px 45px;
     background-color: #FFFFFF;
     box-shadow: 4px 4px 5px 5px rgba(0, 0, 0, 0.25);
     margin: 35px auto;
@@ -25,14 +24,15 @@
 }
 
 .profileListFilm{
-    max-width: 250px;
+    max-width: 270px;
+    width: 100%;
     margin-right: 30px;
 }
 
 .profileSlickSupItem{
     display: flex;
     align-items: center;
-    margin: 37px 0;
+    margin-bottom: 20px;
 }
 
 .profileSlickType{
@@ -40,7 +40,6 @@
     font-size: 24px;
     line-height: 28px;
     color: #000000;
-    margin-right: 45px;
 }
 
 .profileData{
@@ -50,3 +49,4 @@
     line-height: 28px;
     color: #000000;
 }
+

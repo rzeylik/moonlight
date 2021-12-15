@@ -1,20 +1,26 @@
 import React from 'react'
 
 import './styles.css'
+import moment from "moment";
+import {Link} from "react-router-dom";
+import {formFilm} from "../../Router"
 
 
 
-const Board = () => {
+const Board = ({data}) => {
+    const date = moment().format('DD.MM.YYYY')
     return(
-        <div className="upSlider">
-            <div className="sliderItemText">
-                <p className="premiereSlickText">Прем’єра</p>
-                <p className="dateSlickTExt">Сьогодні <span>03.09</span></p>
-                <p className="nameSlickText">Месники</p>
-                <p className="slickText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+        <Link to={formFilm(data?.id)} onClick={() => console.log(data?.id)}>
+            <div className="upSlider">
+                <div className="sliderItemText">
+                    <p className="premiereSlickText">Прем’єра</p>
+                    <p className="dateSlickTExt">Сьогодні <span>{date}</span></p>
+                    <p className="nameSlickText">{data?.name}</p>
+                    <p className="slickText">{data?.description}</p>
+                </div>
+                <img src={data?.large_image} alt="" className="sliderItemImage" />
             </div>
-            <img src="./image/film.jpg" alt="" className="sliderItemImage"></img>
-        </div>
+        </Link>
     )
 }
 

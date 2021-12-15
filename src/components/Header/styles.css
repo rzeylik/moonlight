@@ -57,6 +57,11 @@ a:hover {
   line-height: 28px;
 }
 
+.searchInner{
+  max-width: 700px;
+  width: 100%;
+}
+
 .header_logo{
   font-weight: 900;
 }
@@ -65,8 +70,39 @@ a:hover {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  max-width: 500px;
+  width: 100%;
 }
 
 .logoProfile{
   margin-left: 70px;
+}
+
+.innerSearch{
+  display: flex;
+  position: relative;
+}
+
+.searchInput{
+  width: 100%;
+  max-width: 350px;
+  background-color: #F2F2F2;
+  border: 1px solid #8E8E8E;
+  border-radius: 15px;
+  padding: 5px 15px;
+}
+
+.searchResult{
+  position: absolute;
+  top: 40px;
+  background-color: #c2bbbb;
+  width: 90%;
+  max-height: 200px;
+  overflow-y: scroll;
+}
+
+.searchResultItem{
+display: block;
+  margin: 10px 0;
+  padding: 10px 20px;
 }
